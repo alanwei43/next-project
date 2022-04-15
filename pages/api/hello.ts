@@ -3,7 +3,8 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 
 type Data = {
   name: string,
-  date: string
+  date: string,
+  time: string
 }
 
 export default function handler(
@@ -12,6 +13,7 @@ export default function handler(
 ) {
   res.status(200).json({
     name: 'John Doe',
-    date: (new Date()).toLocaleDateString()
+    date: (new Date()).toLocaleString(),
+    time: (new Date()).toLocaleTimeString(),
   })
 }
