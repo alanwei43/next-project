@@ -1,3 +1,5 @@
+import Head from "next/head";
+import Link from "next/link";
 import React from "react";
 /** 
  *  
@@ -21,7 +23,14 @@ export default class FetchData extends React.Component<FetchDataProps, FetchData
     });
   }
   render() {
-    return (<div>Hello world. @{this.state.data.date}</div>)
+    return (<div>
+      <Head>
+        <meta name="baidu" content="okay" />
+      </Head>
+      Hello world. @{this.state.data.date}
+      <hr />
+      <Link href="/">Back to home</Link>
+    </div>)
   }
 }
 export type FetchDataProps = {}
