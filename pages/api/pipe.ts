@@ -36,7 +36,6 @@ export default async function handler(
     "expires",
   ];
   for (let [key, value] of Array.from(response.headers.entries())) {
-    console.log(key, value);
     if (typeof value !== "string") {
       continue;
     }
